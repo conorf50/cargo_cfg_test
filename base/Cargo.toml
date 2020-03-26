@@ -1,0 +1,17 @@
+[package]
+name = "multilib"
+version = "0.1.0"
+authors = ["conorf50"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+nointerest = { path = "../nointerest"}
+applyinterest = { path = "../applyinterest", default-features = false }
+neginterest = { path = "../neginterest", default-features = false}
+
+[features]
+# Blank features are often used for conditional compilation
+calc_interest = []
+neg_interest = []
